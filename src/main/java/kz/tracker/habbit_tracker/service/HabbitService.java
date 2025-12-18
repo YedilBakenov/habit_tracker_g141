@@ -8,4 +8,12 @@ import java.util.List;
 @Service
 public interface HabbitService {
     List<Habbit> getAllHabits(String habbitName, Double duration);
+
+    Habbit getHabitById(int id);
+
+    Habbit addHabit(Habbit habbit);
+
+    Habbit updateHabit(Habbit habbit);
+
+    void deleteHabit(int id);
 }

@@ -42,4 +42,24 @@ public class HabbitServiceImpl implements HabbitService {
 
         return entityManager.createQuery(query).getResultList();
     }
+
+    @Override
+    public Habbit getHabitById(int id) {
+        return habbitRepository.findById(id).get();
+    }
+
+    @Override
+    public Habbit addHabit(Habbit habbit) {
+        return habbitRepository.save(habbit);
+    }
+
+    @Override
+    public Habbit updateHabit(Habbit habbit) {
+        return habbitRepository.save(habbit);
+    }
+
+    @Override
+    public void deleteHabit(int id) {
+        habbitRepository.deleteById(id);
+    }
 }

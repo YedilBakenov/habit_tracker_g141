@@ -1,5 +1,6 @@
 package kz.tracker.habbit_tracker.dto;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -14,6 +15,7 @@ import java.time.LocalDate;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Schema(name = "schemaHabitDto")
 public class HabbitDto {
 
     private int id;
@@ -22,8 +24,8 @@ public class HabbitDto {
 
     private double duration;
 
-    private LocalDate createdAt;
+    private LocalDate addTime;
 
-    private LocalDate updatedAt;
+    private LocalDate updateTime;
 
 }
