@@ -16,6 +16,7 @@ public interface HabbitMapper {
 
     @Mapping(source = "addTime" , target = "createdAt")
     @Mapping(source = "updateTime" , target = "updatedAt")
+    @Mapping(target = "id", ignore = true)
     Habbit toModel(HabbitDto habbitDto);
 
     List<HabbitDto> toDtoList(List<Habbit>habbits);
