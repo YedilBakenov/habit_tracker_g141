@@ -1,0 +1,1 @@
+ALTER TABLE habbits ALTER COLUMN meta TYPE TEXT;
